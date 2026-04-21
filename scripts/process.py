@@ -7,6 +7,7 @@ OUTPUT_PATH = "output/output.csv"
 LOG_PATH = "logs/pipeline.log"
 
 def log(message):
+    os.makedirs("logs", exist_ok=True)
     with open(LOG_PATH, "a") as f:
         f.write(f"{datetime.now()} - {message}\n")
 
